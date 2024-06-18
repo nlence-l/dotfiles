@@ -1,9 +1,8 @@
 # remap prefix
 unbind C-b
 set-option -g prefix C-s
-bind-key C-a send-prefix
 
-#bind-key C-c run "tmux show-buffer | xsel -i -b"
+bind-key C-c run "tmux show-buffer | xsel -i -b"
 
 # reload config file
 bind-key r source-file ~/.tmux.conf
@@ -11,8 +10,8 @@ bind-key r source-file ~/.tmux.conf
 # split panes using v and h
 unbind '"'
 unbind %
-bind-key v split-window -v
-bind-key h split-window -h
+bind-key v split-window -h
+bind-key h split-window -v
 
 set -g default-terminal "screen-256color"
 
@@ -27,3 +26,4 @@ bind -n M-Left select-pane -L
 bind -n M-Right select-pane -R
 bind -n M-Up select-pane -U
 bind -n M-Down select-pane -D
+
