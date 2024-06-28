@@ -1,1 +1,2 @@
-# tmux's and vim's configuration files :)
+# daily basis tools config files
+
