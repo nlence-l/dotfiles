@@ -1,15 +1,14 @@
 # Dotfiles for Vim and Tmux
 
-This repository contains my personal configuration files
+This repository contains my personal configuration files.
 
 ## Usage
 
-Copy these file to your home folder
+To install these configuration files, follow these steps:
 
 ```bash
 git clone https://github.com/iptooth/dotfiles.git
 cd dotfiles
-cp .vimrc ~/.vimrc
-cp .tmux.conf ~/.tmux.conf
+cp .vimrc ~/.vimrc && cp .tmux.conf ~/.tmux.conf
 cd .. && rm -rf dotfiles
 ```
