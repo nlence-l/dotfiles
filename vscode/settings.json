@@ -1,0 +1,28 @@
+{
+    "workbench.colorTheme": "GitHub Dark",
+    "workbench.iconTheme": "material-icon-theme",
+
+    "files.autoSave": "afterDelay",
+
+    "editor.lineNumbers": "relative",
+
+    "vim.leader": "<Space>",
+    
+    "vim.normalModeKeyBindingsNonRecursive": [
+        { "before": ["leader", "v"], "commands": [":vsplit"] },
+        { "before": ["leader", "h"], "commands": [":split"] },
+        { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+    ],
+
+    "vim.insertModeKeyBindingsNonRecursive": [
+        { "before": ["k", "j"], "after": ["<Esc>"] },
+    ],
+    
+    "vim.visualModeKeyBindingsNonRecursive": [
+        { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+        { "before": [">"], "commands": ["editor.action.indentLines"] },
+        { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+        { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+        { "before": ["k", "j"], "after": ["<Esc>"] },
+    ],
+}
