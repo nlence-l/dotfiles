@@ -5,17 +5,23 @@
     "files.autoSave": "afterDelay",
 
     "editor.lineNumbers": "relative",
-
+ 
     "vim.leader": "<Space>",
     
     "vim.normalModeKeyBindingsNonRecursive": [
+        { "before": ["<S-h>"], "commands": [":bprevious"]},
+        { "before": ["<S-l>"], "commands": [":bnext"]},
+
         { "before": ["leader", "v"], "commands": [":vsplit"] },
         { "before": ["leader", "h"], "commands": [":split"] },
+
         { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+
+        { "before": ["leader", "w"], "commands": ["workbench.action.files.save"] }
     ],
 
     "vim.insertModeKeyBindingsNonRecursive": [
-        { "before": ["k", "j"], "after": ["<Esc>"] },
+        { "before": ["k", "j"], "after": ["<Esc>"] }
     ],
     
     "vim.visualModeKeyBindingsNonRecursive": [
@@ -23,6 +29,6 @@
         { "before": [">"], "commands": ["editor.action.indentLines"] },
         { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
         { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
-        { "before": ["k", "j"], "after": ["<Esc>"] },
+        { "before": ["k", "j"], "after": ["<Esc>"] }
     ],
 }
