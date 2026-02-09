@@ -6,15 +6,17 @@ vim.opt.modelines = 0
 -- Line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.cursorline = true
 
 -- Encoding and display
 vim.opt.encoding = "utf-8"
 vim.opt.wrap = true
+vim.opt.clipboard = "unnamedplus"
 
 -- Indentation
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.softtabstop = 2
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
 vim.opt.autoindent = true
 vim.opt.copyindent = true
 vim.opt.expandtab = true
@@ -31,10 +33,16 @@ vim.opt.hidden = true
 vim.opt.ttimeout = true
 vim.opt.laststatus = 2
 vim.opt.showcmd = true
+-- vim.opt.mouse = "a"
 
 -- Enable transparent background
-vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
-vim.cmd("highlight NonText guibg=NONE ctermbg=NONE")
-vim.cmd("highlight LineNr guibg=NONE ctermbg=NONE")
-vim.cmd("highlight SignColumn guibg=NONE ctermbg=NONE")
-vim.cmd("highlight EndOfBuffer guibg=NONE ctermbg=NONE")
+local hi = vim.api.nvim_set_hl
+hi(0, "Normal", {bg = "NONE"})
+hi(0, "NonText", {bg = "NONE"})
+hi(0, "LineNr", {bg = "NONE"})
+hi(0, "SignColumn", {bg = "NONE"})
+hi(0, "EndOfBuffer", {bg = "NONE"})
+
+-- Leader key
+vim.g.mapleader = " "
+
